@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="robots" content="none" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="rust4mchik | https://vk.com/rustam4ikru" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title> Таймер by rust4mchik </title>
+  <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap-reboot.css" rel="stylesheet" type="text/css" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+
+  <div id="app-root">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col">
+              <div class="logo">
+                <span>Timer</span><br />
+                by
+                <a target="_blank" href="https://vk.com/rustam4ikru">rust4mchik</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="buttons-times d-flex align-items-center justify-content-end">
+                <div class="set-time" time="480">
+                  8 мин
+                </div>
+                <div title="Add time" class="add-btn">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 my-4">
+          <div class="row">
+            <div class="col-12 col-md-8 d-flex justify-content-center">
+              <div class="inputs">
+                <span>Time:</span>
+                <input id="hours" type="text" min="0" maxlength="2" value="00" />
+                <span class="colon">:</span>
+                <input id="minutes" type="text" maxlength="2" value="00" />
+                <span class="colon dots-seconds">:</span>
+                <input id="seconds" type="text" maxlength="2" value="00" />
+              </div>
+            </div>
+            <div class="col-12 col-md-4 mt-4 mt-md-0">
+              <div class="buttons">
+                <div title="play" class="control button-play">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div title="redo" class="control button-redo">
+                  <i class="fas fa-redo"></i>
+                </div>
+                <div title="settings" class="control button-settings active">
+                  <i class="fas fa-wrench"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 d-none" id="stop">
+              <div class="stop">Остановить.</div>
+            </div>
+            <div class="col-12 my-4">
+              <div class="time">
+                <div class="row align-items-center">
+                  <div class="col-3 text-right">
+                    <div class="now-time">
+                      ???????
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="line-time">
+                      <div class="line-time__b"></div>
+                      <div class="line-time__b way"></div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="future-time">
+                      ??:??:??
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-4">
+          <div class="settings d-block">
+            <h2 class="mb-4">Настройки таймера</h3>
+              <div class="row">
+                <div class="col-6 text-right">
+                  <span>Громкость:</span>
+                </div>
+                <div class="col-6">
+                  <input id="volume" type="range" min="1" max="10" value="8" />
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
